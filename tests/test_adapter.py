@@ -52,7 +52,7 @@ def test_adapter(collateral, pool, synthetic_token):
         pool.feePercentage(),
         {"from": account},
     )
-    assert synthetic_token.balanceOf(adapter.address) >= exactSyntheticAmountToBuy
+    assert synthetic_token.balanceOf(account) >= exactSyntheticAmountToBuy
     synthetic_token.transfer(
         account,
         synthetic_token.balanceOf(userWithSyntheticTokens),
@@ -70,4 +70,4 @@ def test_adapter(collateral, pool, synthetic_token):
         pool.feePercentage(),
         {"from": account},
     )
-    assert synthetic_token.balanceOf(adapter.address) >= exactCollateralAmountToBuy
+    assert synthetic_token.balanceOf(account) >= exactCollateralAmountToBuy

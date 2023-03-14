@@ -42,7 +42,7 @@ contract JarvisAdapter {
                 _syntheticAmountToBuy,
                 finalCollateralToPay,
                 _expiration,
-                address(this)
+                msg.sender
             );
         IStandardERC20(_collateralToken).approve(
             _synthereumPool,
@@ -86,7 +86,7 @@ contract JarvisAdapter {
                 expectedSyntheticTokens,
                 _collateralAmountToBuy,
                 _expiration,
-                address(this)
+                msg.sender
             );
         IStandardERC20(_syntheticToken).approve(
             _synthereumPool,
