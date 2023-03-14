@@ -1,0 +1,14 @@
+dependencies:
+  - aave/aave-v3-core@1.17.2
+  - OpenZeppelin/openzeppelin-contracts@4.8.1
+  - smartcontractkit/chainlink-brownie-contracts@0.6.1
+compiler:
+  solc:
+    remappings:
+      - '@aave=aave/aave-v3-core@1.17.2'
+      - '@openzeppelin=OpenZeppelin/openzeppelin-contracts@4.8.1'
+      - '@chainlink=smartcontractkit/chainlink-brownie-contracts@0.6.1'
+wallets:
+  from_key: ${PRIVATE_KEY}
+networks:
+  default: development
